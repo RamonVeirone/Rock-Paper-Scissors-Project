@@ -2,3 +2,9 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
 }
+
+button {
+    padding: 7px 40px;
+    margin: 5px;
+    font-size: auto;
+}
