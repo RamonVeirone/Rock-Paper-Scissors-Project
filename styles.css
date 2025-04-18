@@ -8,3 +8,7 @@ button {
     margin: 5px;
     font-size: auto;
 }
+
+#result {
+    margin-top: 20px;
+}
