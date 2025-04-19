@@ -34,3 +34,15 @@ function determineWinner() {
     return "Computer won!";
   }
 }
+
+function displayResult(player, computer, result) {
+  document.getElementById(
+    "player-choice"
+  ).textContent = `Your choice is ${player}`;
+
+  document.getElementById(
+    "computer-choice"
+  ).textContent = `The computer's choice is ${computer}`;
+
+  document.getElementById("result").textContent = `The result is ${result}`;
+}
