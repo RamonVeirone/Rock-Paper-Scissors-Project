@@ -62,3 +62,10 @@ function playGame() {
   const result = determineWinner(playerChoice, computerChoice);
   displayResult(playerChoice, computerChoice, result);
 }
+
+const rulesbtn = document.getElementById("rules-btn");
+rulesbtn.addEventListener("click", function () {
+  alert(
+    "Rules: \n -Rock beats scissors \n -Scissors beats paper \n -Paper beats rock"
+  );
+});
