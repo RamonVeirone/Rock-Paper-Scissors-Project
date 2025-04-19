@@ -1,7 +1,8 @@
 const rockbtn = document.getElementById("rock");
 const paperbtn = document.getElementById("paper");
 const scissorsbtn = document.getElementById("scissors");
-let playerChoice = "";
+let playerChoice = '';
+let lastPlayerChoice = ''
 
 rockbtn.addEventListener("click", function () {
   playerChoice = "rock";
