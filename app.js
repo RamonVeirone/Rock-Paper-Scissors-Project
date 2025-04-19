@@ -25,7 +25,7 @@ function getComputerChoice() {
   return choices[randomIndex];
 }
 
-function determineWinner() {
+function determineWinner(player, computer) {
   if (player === computer) {
     return "Draw";
   } else if (
