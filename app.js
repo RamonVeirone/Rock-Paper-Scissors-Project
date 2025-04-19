@@ -15,8 +15,22 @@ scissorsbtn.addEventListener("click", function () {
   playerChoice = "scissors";
 });
 
-function getComputerChoice(){
-    const choices = ['rock', 'paper', 'scissors'];
-    const randomIndex = Math.floor(Math.random() * 3);
-    return choices[randomIndex];
+function getComputerChoice() {
+  const choices = ["rock", "paper", "scissors"];
+  const randomIndex = Math.floor(Math.random() * 3);
+  return choices[randomIndex];
+}
+
+function determineWinner() {
+  if (player === computer) {
+    return "Draw";
+  } else if (
+    (player === "rock" && computer === "scissors") ||
+    (player === "paper" && computer === "rock") ||
+    (player === "scissors" && computer === "paper")
+  ) {
+    return "You won!";
+  } else {
+    return "Computer won!";
+  }
 }
