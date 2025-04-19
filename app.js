@@ -42,13 +42,13 @@ function determineWinner(player, computer) {
 function displayResult(player, computer, result) {
   document.getElementById(
     "player-choice"
-  ).textContent = `Your choice is ${player}`;
+  ).textContent = `Your choice is: ${player}`;
 
   document.getElementById(
     "computer-choice"
-  ).textContent = `The computer's choice is ${computer}`;
+  ).textContent = `The computer's choice is: ${computer}`;
 
-  document.getElementById("game-result").textContent = `The result is ${result}`;
+  document.getElementById("game-result").textContent = `The result is: ${result}`;
 }
 
 function playGame() {
