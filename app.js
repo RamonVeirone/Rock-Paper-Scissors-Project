@@ -1,19 +1,22 @@
 const rockbtn = document.getElementById("rock");
 const paperbtn = document.getElementById("paper");
 const scissorsbtn = document.getElementById("scissors");
-let playerChoice = '';
-let lastPlayerChoice = ''
+let playerChoice = "";
+let lastPlayerChoice = "";
 
 rockbtn.addEventListener("click", function () {
   playerChoice = "rock";
+  playGame();
 });
 
 paperbtn.addEventListener("click", function () {
   playerChoice = "paper";
+  playGame();
 });
 
 scissorsbtn.addEventListener("click", function () {
   playerChoice = "scissors";
+  playGame();
 });
 
 function getComputerChoice() {
@@ -46,4 +49,16 @@ function displayResult(player, computer, result) {
   ).textContent = `The computer's choice is ${computer}`;
 
   document.getElementById("result").textContent = `The result is ${result}`;
+}
+
+function playGame() {
+  if (playerChoice === "rock" && lastPlayerChoice === "rock") {
+    alert("Rock can not be selected two times in a row!");
+    return;
+  }
+
+  lastPlayerChoice = playerChoice;
+  const computerChoice = getComputerChoice();
+  const result = determineWinner(playerChoice, computerChoice);
+  displayResult(playerChoice, computerChoice, result);
 }
