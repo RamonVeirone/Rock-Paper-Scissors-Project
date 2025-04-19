@@ -48,7 +48,7 @@ function displayResult(player, computer, result) {
     "computer-choice"
   ).textContent = `The computer's choice is ${computer}`;
 
-  document.getElementById("result").textContent = `The result is ${result}`;
+  document.getElementById("game-result").textContent = `The result is ${result}`;
 }
 
 function playGame() {
