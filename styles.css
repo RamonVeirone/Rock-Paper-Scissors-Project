@@ -8,6 +8,9 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/2249793-nowruz-feriado-padrao-fundo-gratis-vetor.jpg);
+    background-size: cover;
+    background-position: 100%;
 }
 
 button {
