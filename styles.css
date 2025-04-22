@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+
 }
 
 
@@ -8,7 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/2249793-nowruz-feriado-padrao-fundo-gratis-vetor.jpg);
+    background-image: url(https://images.pexels.com/photos/7605260/pexels-photo-7605260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-size: cover;
     background-position: 100%;
 }
