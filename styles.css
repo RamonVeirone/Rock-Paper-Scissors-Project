@@ -1,23 +1,7 @@
 * {
     box-sizing: border-box;
-
 }
-
-
-
 
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: antiquewhite;
-}
-
-button {
-    padding: 7px 40px;
-    margin: 5px;
-    font-size: auto;
-}
-
-#result {
-    margin-top: 20px;
+    margin: 0;
 }
