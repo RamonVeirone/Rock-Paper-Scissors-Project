@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -7,33 +7,34 @@
 body {
     margin: 0;
     font-family: "Merriweather", serif;
+    background-color: #475fe2;
+    color: lightgrey;
 }
 
 .navbar{
     display: flex;
     flex-flow: row wrap;
-    background-color: antiquewhite;
+    background-color: #3550cf;
     height: 120px;
     justify-content: center;
     align-items: center;
+    color: lightgray;
 }
 
 #logo {
     flex: 20%;
-    border: 1px solid red;
     text-align: center;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
 #result {
-    flex: 70%;
-    border: 1px solid green;
+    flex: 75%;
     text-align: right;
     padding: 20px 16px;
 }
 
 #player-choice, #computer-choice, #game-result {
-    background-color: #8c835a;
+    background-color: #1232a9;
     display: inline-block;
     text-align: center;
     margin: 5px;
