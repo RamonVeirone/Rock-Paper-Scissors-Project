@@ -27,15 +27,15 @@ function getComputerChoice() {
 
 function determineWinner(player, computer) {
   if (player === computer) {
-    return "Draw";
+    return "draw";
   } else if (
     (player === "rock" && computer === "scissors") ||
     (player === "paper" && computer === "rock") ||
     (player === "scissors" && computer === "paper")
   ) {
-    return "You won!";
+    return "you won!";
   } else {
-    return "Computer won!";
+    return "computer won!";
   }
 }
 
