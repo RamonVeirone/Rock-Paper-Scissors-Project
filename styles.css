@@ -11,6 +11,14 @@ body {
     color: lightgrey;
 }
 
+header {
+    background-color: #2a50c8;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .navbar{
     display: flex;
     flex-flow: row wrap;
