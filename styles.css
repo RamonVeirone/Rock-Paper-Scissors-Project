@@ -19,6 +19,33 @@ header {
     align-items: center;
 }
 
+footer {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+    margin-bottom: 2vh; 
+    padding: 1rem;    
+}
+
+h2 {
+    font-size: 15px;
+}
+
+#name-ramon{
+    text-decoration: none;
+    color: lightgray;
+    font-family: cursive;
+}
+
+#name-ramon:hover {
+    color: #00187e;
+    margin-top: auto;
+}
+
 .navbar{
     display: flex;
     flex-flow: row wrap;
@@ -47,5 +74,19 @@ header {
     text-align: center;
     margin: 5px;
     border-radius: 10px;
+    padding: 6px;
+}
+
+#rules-btn {
+    color: lightgrey;
+    background-color: #1232a9;
+    border-radius: 10px;
+    border: 0;
+    padding: 5px;
+    font-size: 15px;
+}
+
+#rules-btn:hover {
+    font-size: 16px;
     padding: 6px;
 }
