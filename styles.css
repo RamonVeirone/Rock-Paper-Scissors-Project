@@ -87,6 +87,24 @@ h2 {
 }
 
 #rules-btn:hover {
-    font-size: 16px;
-    padding: 6px;
+    transform: scale(1.1);
+}
+
+#choices button {
+    background-color: red;
+    color: lightgrey;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 20px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#choices button:hover {
+    background-color: #00187e;
+    transform: scale(1.1);
 }
