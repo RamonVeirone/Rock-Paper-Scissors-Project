@@ -129,3 +129,13 @@ footer {
 #computer-choice span {
     vertical-align: middle;
 }
+
+#game-result i {
+    font-size: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+#game-result span {
+    vertical-align: middle;
+}
