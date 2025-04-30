@@ -20,7 +20,7 @@ scissorsbtn.addEventListener("click", function () {
 });
 
 function getComputerChoice() {
-  const choices = ["rock", "papers", "scissors"];
+  const choices = ["rock", "paper", "scissors"];
   const randomIndex = Math.floor(Math.random() * 3);
   return choices[randomIndex];
 }
@@ -61,9 +61,10 @@ function displayResult(player, computer, result) {
   if (result === "draw") {
     resultIcon.classList.add("fa-handshake");
     resultIcon.style.color = "yellow";
+    resultIcon.style.display = "inline";
     playerIcon.style.display = "none";
     computerIcon.style.display = "none";
-  } else {
+} else {
     playerIcon.classList.add(iconMap[player]);
     computerIcon.classList.add(iconMap[computer]);
     playerIcon.style.display = "inline";
