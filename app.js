@@ -20,7 +20,7 @@ scissorsbtn.addEventListener("click", function () {
 });
 
 function getComputerChoice() {
-  const choices = ["rock", "paper", "scissors"];
+  const choices = ["rock", "papers", "scissors"];
   const randomIndex = Math.floor(Math.random() * 3);
   return choices[randomIndex];
 }
@@ -44,37 +44,37 @@ function displayResult(player, computer, result) {
     rock: "fa-hand-back-fist",
     paper: "fa-hand",
     scissors: "fa-hand-scissors",
+  };
+
+  const playerIcon = document.getElementById("player-icon");
+  const computerIcon = document.getElementById("computer-icon");
+  const playerText = document.getElementById("player-text");
+  const computerText = document.getElementById("computer-text");
+  const resultText = document.getElementById("result-text");
+
+  playerText.textContent = player;
+  computerText.textContent = computer;
+  resultText.textContent = result;
+
+  playerIcon.className = "fa-solid";
+  computerIcon.className = "fa-solid";
+
+  if (result === "draw") {
+    playerIcon.classList.add("fa-handshake");
+    computerIcon.classList.add("fa-handshake");
+    playerIcon.style.color = "yellow";
+    computerIcon.style.color = "yellow";
+  } else if (result === "you won!") {
+    playerIcon.classList.add(iconMap[player]);
+    computerIcon.classList.add(iconMap[computer]);
+    playerIcon.style.color = "green";
+    computerIcon.style.color = "lightgrey";
+  } else {
+    playerIcon.classList.add(iconMap[player]);
+    computerIcon.classList.add(iconMap[computer]);
+    playerIcon.style.color = "lightgrey";
+    computerIcon.style.color = "red";
   }
-};
-
-const playerIcon = document.getElementById("player-icon")
-const computerIcon = document.getElementById("computer-icon")
-const resultIcon = document.getElementById("result-icon")
-const playerText = document.getElementById("player-text")
-const computerText = document.getElementById("computer-text")
-const resultText = document.getElementById("result-icon")
-
-playerText.textContent = player;
-computerText.textContent = computer;
-resultText.textContent = result;
-
-playerIcon.className = "fa-solid";
-computerIcon.className = "fa-solid";
-resultIcon.className = "fa-solid"
-
-if (result === "draw") {
-  resultIcon.classList.add("fa-handshake");
-  resultIcon.style.color = "yellow"
-} else if (result === "you won!") {
-  playerIcon.classList.add(iconMap[player]);
-  computerIcon.classList.add(iconMap[computer]);
-  playerIcon.style.color = "green";
-  computerIcon.style.color = "lighgrey";
-} else {
-  playerIcon.classList.add(iconMap[player]);
-  computerIcon.classList.add(iconMap[computer]);
-  computerIcon.style.color = "red";
-  playerIcon.style.color = "lighgrey";
 }
 
 function playGame() {
