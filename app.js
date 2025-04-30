@@ -48,32 +48,35 @@ function displayResult(player, computer, result) {
 
   const playerIcon = document.getElementById("player-icon");
   const computerIcon = document.getElementById("computer-icon");
-  const playerText = document.getElementById("player-text");
-  const computerText = document.getElementById("computer-text");
+  const resultIcon = document.getElementById("result-icon");
   const resultText = document.getElementById("result-text");
-
-  playerText.textContent = player;
-  computerText.textContent = computer;
-  resultText.textContent = result;
 
   playerIcon.className = "fa-solid";
   computerIcon.className = "fa-solid";
+  resultIcon.className = "fa-solid";
+  resultIcon.style.color = "";
+
+  resultText.textContent = result;
 
   if (result === "draw") {
-    playerIcon.classList.add("fa-handshake");
-    computerIcon.classList.add("fa-handshake");
-    playerIcon.style.color = "yellow";
-    computerIcon.style.color = "yellow";
-  } else if (result === "you won!") {
-    playerIcon.classList.add(iconMap[player]);
-    computerIcon.classList.add(iconMap[computer]);
-    playerIcon.style.color = "green";
-    computerIcon.style.color = "lightgrey";
+    resultIcon.classList.add("fa-handshake");
+    resultIcon.style.color = "yellow";
+    playerIcon.style.display = "none";
+    computerIcon.style.display = "none";
   } else {
     playerIcon.classList.add(iconMap[player]);
     computerIcon.classList.add(iconMap[computer]);
-    playerIcon.style.color = "lightgrey";
-    computerIcon.style.color = "red";
+    playerIcon.style.display = "inline";
+    computerIcon.style.display = "inline";
+    resultIcon.style.display = "none";
+
+    if (result === "you won!") {
+      playerIcon.style.color = "green";
+      computerIcon.style.color = "lightgrey";
+    } else {
+      playerIcon.style.color = "lightgrey";
+      computerIcon.style.color = "red";
+    }
   }
 }
 
