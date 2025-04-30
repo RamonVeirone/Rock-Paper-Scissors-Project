@@ -27,15 +27,15 @@ function getComputerChoice() {
 
 function determineWinner(player, computer) {
   if (player === computer) {
-    return "draw";
+    return "Draw!";
   } else if (
     (player === "rock" && computer === "scissors") ||
     (player === "paper" && computer === "rock") ||
     (player === "scissors" && computer === "paper")
   ) {
-    return "you won!";
+    return "You won!";
   } else {
-    return "computer won!";
+    return "Computer won!";
   }
 }
 
@@ -58,7 +58,7 @@ function displayResult(player, computer, result) {
 
   resultText.textContent = result;
 
-  if (result === "draw") {
+  if (result === "Draw!") {
     resultIcon.classList.add("fa-handshake");
     resultIcon.style.color = "yellow";
     resultIcon.style.display = "inline";
@@ -71,7 +71,7 @@ function displayResult(player, computer, result) {
     computerIcon.style.display = "inline";
     resultIcon.style.display = "none";
 
-    if (result === "you won!") {
+    if (result === "You won!") {
       playerIcon.style.color = "green";
       computerIcon.style.color = "lightgrey";
     } else {
