@@ -57,7 +57,7 @@ main {
 }
 
 #choices button {
-    background-color: #1232a9;
+    background-color: #1534a3;
     color: lightgrey;
     border: none;
     border-radius: 10px;
@@ -75,7 +75,7 @@ main {
 }
 
 #choices button:hover {
-    background-color: #00187e;
+    background-color: #2a50c8;
     transform: scale(1.1);
 }
 
@@ -108,10 +108,10 @@ footer {
 
 #rules-btn {
     color: lightgrey;
-    background-color: #1232a9;
+    background-color: #00187e;
     border-radius: 10px;
     border: 0;
-    padding: 5px;
+    padding: 10px;
     font-size: 15px;
 }
 
