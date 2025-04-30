@@ -40,15 +40,41 @@ function determineWinner(player, computer) {
 }
 
 function displayResult(player, computer, result) {
-  document.getElementById(
-    "player-choice"
-  ).textContent = `Your choice is: ${player}`;
+  const iconMap = {
+    rock: "fa-hand-back-fist",
+    paper: "fa-hand",
+    scissors: "fa-hand-scissors",
+  }
+};
 
-  document.getElementById(
-    "computer-choice"
-  ).textContent = `The computer's choice is: ${computer}`;
+const playerIcon = document.getElementById("player-icon")
+const computerIcon = document.getElementById("computer-icon")
+const resultIcon = document.getElementById("result-icon")
+const playerText = document.getElementById("player-text")
+const computerText = document.getElementById("computer-text")
+const resultText = document.getElementById("result-icon")
 
-  document.getElementById("game-result").textContent = `The result is: ${result}`;
+playerText.textContent = player;
+computerText.textContent = computer;
+resultText.textContent = result;
+
+playerIcon.className = "fa-solid";
+computerIcon.className = "fa-solid";
+resultIcon.className = "fa-solid"
+
+if (result === "draw") {
+  resultIcon.classList.add("fa-handshake");
+  resultIcon.style.color = "yellow"
+} else if (result === "you won!") {
+  playerIcon.classList.add(iconMap[player]);
+  computerIcon.classList.add(iconMap[computer]);
+  playerIcon.style.color = "green";
+  computerIcon.style.color = "lighgrey";
+} else {
+  playerIcon.classList.add(iconMap[player]);
+  computerIcon.classList.add(iconMap[computer]);
+  computerIcon.style.color = "red";
+  playerIcon.style.color = "lighgrey";
 }
 
 function playGame() {
